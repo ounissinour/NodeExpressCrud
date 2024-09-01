@@ -54,9 +54,5 @@ Cette API Node.js permet de gérer les informations des étudiants avec des opé
 - **Node.js** : Version 16 ou supérieure.
 - **MongoDB Atlas** : Une base de données en ligne.
 
-## Installation
-
-1. **Cloner le Dépôt** :
-   ```bash
-   git clone https://github.com/nom_utilisateur/nom_du_depot.git
-   cd nom_du_depot
+## Auteur
+Nour Ounissi - Développeur principal
