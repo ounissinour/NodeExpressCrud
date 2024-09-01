@@ -1,72 +1,82 @@
-#Description#
-Cette API Node.js permet de gérer les informations des étudiants à l'aide de CRUD (Create, Read, Update, Delete) operations. L'application est construite avec Express pour le serveur web et Mongoose pour la gestion de la base de données MongoDB.
-
+Description
+API Node.js pour gérer les informations des étudiants.
+Utilise Express pour le serveur web et Mongoose pour la gestion de MongoDB.
 Fonctionnalités
-Création d'un étudiant : Ajouter un nouvel étudiant à la base de données avec des détails tels que le CIN, le nom, le prénom et l'email.
-Lecture des étudiants : Récupérer la liste de tous les étudiants enregistrés dans la base de données.
-Mise à jour des informations : Mettre à jour l'email d'un étudiant spécifique.
-Suppression d'un étudiant : Supprimer un étudiant de la base de données en utilisant son ID.
+Création : Ajouter un nouvel étudiant.
+Lecture : Récupérer la liste de tous les étudiants.
+Mise à jour : Mettre à jour l'email d'un étudiant.
+Suppression : Supprimer un étudiant par son ID.
 Endpoints de l'API
 GET /etudiants
-Description : Récupère la liste de tous les étudiants.
-Réponse :
-Code 200 : Liste des étudiants.
+
+Description : Récupère tous les étudiants.
+Réponse : Liste des étudiants.
 POST /ajouter_etudiant
-Description : Ajoute un nouvel étudiant à la base de données.
-Paramètres de la Requête :
+
+Description : Ajoute un nouvel étudiant.
+Paramètres :
 cin : CIN de l'étudiant.
 nom : Nom de l'étudiant.
 prenom : Prénom de l'étudiant.
 email : Email de l'étudiant.
 Réponse :
-Code 200 : Message de confirmation de sauvegarde réussie.
-Code 400 : Erreur de validation des données.
+200 : Sauvegarde réussie.
+400 : Erreur de validation.
 PUT /maj/:id
-Description : Met à jour l'email d'un étudiant spécifique.
-Paramètres de la Requête :
-id : ID de l'étudiant à mettre à jour.
-email : Nouveau email de l'étudiant.
+
+Description : Met à jour l'email d'un étudiant.
+Paramètres :
+id : ID de l'étudiant.
+email : Nouveau email.
 Réponse :
-Code 200 : Message de confirmation de mise à jour réussie.
-Code 404 : Étudiant non trouvé.
+200 : Mise à jour réussie.
+404 : Étudiant non trouvé.
 DELETE /delete/:id
-Description : Supprime un étudiant de la base de données.
-Paramètres de la Requête :
-id : ID de l'étudiant à supprimer.
+
+Description : Supprime un étudiant par son ID.
+Paramètres :
+id : ID de l'étudiant.
 Réponse :
-Code 200 : Message de confirmation de suppression réussie.
-Code 404 : Étudiant non trouvé.
+200 : Suppression réussie.
+404 : Étudiant non trouvé.
 Prérequis
-Node.js : Assurez-vous que Node.js est installé sur votre machine.
-MongoDB Atlas : Une base de données MongoDB en ligne (Atlas) doit être configurée.
+Node.js : Version 16 ou supérieure.
+MongoDB Atlas : Configuration d'une base de données en ligne.
 Installation
 Cloner le Dépôt :
 
-Clonez le projet depuis le dépôt GitHub.
+bash
+Copier le code
+git clone https://github.com/nom_utilisateur/nom_du_depot.git
+cd nom_du_depot
 Installer les Dépendances :
 
-Exécutez npm install pour installer toutes les dépendances nécessaires.
+bash
+Copier le code
+npm install
 Configurer les Variables d'Environnement :
 
-Créez un fichier .env à la racine du projet avec la chaîne de connexion MongoDB (MONGO_URI).
+Créez un fichier .env avec MONGO_URI.
 Démarrage
 Démarrer le Serveur :
 
-Utilisez npm start pour démarrer le serveur.
+bash
+Copier le code
+npm start
 Accéder à l'API :
 
-L'application sera disponible à l'adresse http://localhost:5000.
+URL : http://localhost:5000
 Tests
-Utilisation de Thunder : Pour tester les endpoints de l'API, vous pouvez utiliser Thunder en configurant un fichier de tests pour automatiser les vérifications des fonctionnalités.
+Thunder : Utilisez Thunder pour automatiser les tests de l'API.
 Contribution
-Les contributions sont les bienvenues. Pour contribuer :
-
+Étapes pour Contribuer :
 Forkez le dépôt.
-Créez une branche pour votre fonctionnalité ou correctif.
-Faites vos modifications.
+Créez une branche pour vos modifications.
+Faites un commit.
+Poussez la branche.
 Soumettez une Pull Request.
 Licence
-Ce projet est sous licence ISC. Consultez le fichier LICENSE pour plus de détails.
-
+Licence : ISC
+Consultez le fichier LICENSE pour plus de détails.
 Auteurs
 Nour Ounissi - Développeur principal - Votre Profil GitHub
