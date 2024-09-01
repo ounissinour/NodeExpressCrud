@@ -32,4 +32,31 @@ Cette API Node.js permet de gérer les informations des étudiants avec des opé
 
 ### PUT `/maj/:id`
 
-- **Description** : Met à jour l'email d'un étu
+- **Description** : Met à jour l'email d'un étudiant spécifique.
+- **Paramètres** :
+  - `id` : ID de l'étudiant.
+  - `email` : Nouveau email.
+- **Réponse** :
+  - **200** : Mise à jour réussie.
+  - **404** : Étudiant non trouvé.
+
+### DELETE `/delete/:id`
+
+- **Description** : Supprime un étudiant par son ID.
+- **Paramètres** :
+  - `id` : ID de l'étudiant.
+- **Réponse** :
+  - **200** : Suppression réussie.
+  - **404** : Étudiant non trouvé.
+
+## Prérequis
+
+- **Node.js** : Version 16 ou supérieure.
+- **MongoDB Atlas** : Une base de données en ligne.
+
+## Installation
+
+1. **Cloner le Dépôt** :
+   ```bash
+   git clone https://github.com/nom_utilisateur/nom_du_depot.git
+   cd nom_du_depot
